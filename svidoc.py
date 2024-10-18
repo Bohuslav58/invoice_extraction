@@ -1190,7 +1190,7 @@ def filling_mindee_xml(image_file, file_path_):
   myfile.writelines('-----------------------------------------------------------------------------------------------')
   myfile.writelines('\n')
   print('print from procedure  ', file_path_)
-  mytree.write(file_path_)
+  #mytree.write(file_path_)
   return
 
 
