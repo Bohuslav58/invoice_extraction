@@ -1218,7 +1218,7 @@ def convert(file_path):
     working_dir=os.getcwd()
     i=0 # index of input file
     val_list=[]
-    print('path name', file_pat)
+    print('path name', file_path)
 
     while(i< len(file_path)):
       #separate filename and change file type
