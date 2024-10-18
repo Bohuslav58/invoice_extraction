@@ -1283,6 +1283,7 @@ with gr.Blocks( theme=gr.themes.Soft() ) as demo:
     """)
     output = gr.Textbox(label="Converted file validation according to xsd")
     greet_btn = gr.Button("Convert files to isdoc format",  variant = 'primary')
+    print('greet_btn', greet_btn)
     greet_btn.click(fn=convert, inputs=gr.Files(label='At first, Choose files to be uploaded inside , after that click on convert '), outputs=output,api_name="convert")
     #css=cs
 
