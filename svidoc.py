@@ -1190,7 +1190,7 @@ def filling_mindee_xml(image_file, file_path_):
   myfile.writelines('-----------------------------------------------------------------------------------------------')
   myfile.writelines('\n')
   print('print from procedure  ', file_path_)
-  #mytree.write(file_path_)
+  mytree.write(file_path_)
   return
 
 
@@ -1211,7 +1211,7 @@ class Seafoam(Base):
 
 
 
-if os.path.isfile('/content/protokol_conversion.txt'):
+if os.path.isfile('protokol_conversion.txt'):
   os.remove('protokol_conversion.txt')
 
 def convert(file_path):
@@ -1235,8 +1235,8 @@ def convert(file_path):
 
 
 
-#      if not os.path.exists(working_dir +'/isdoc'):
- #       os.mkdir(working_dir + "/isdoc")
+      if not os.path.exists(working_dir +'/isdoc'):
+        os.mkdir(working_dir + "/isdoc")
 
 
       filling_mindee_xml(file_path[i], working_dir  +new_file_path)
@@ -1244,12 +1244,12 @@ def convert(file_path):
 
 
 
-      #my_schema = xmlschema.XMLSchema('isdoc-invoice-6.0.2.xsd')
+      my_schema = xmlschema.XMLSchema('isdoc-invoice-6.0.2.xsd')
 
-      #if my_schema.is_valid(working_dir +'/isdoc/' + new_file_path):
-      #  val_list.append( new_file_path +  ' ISDOC Validation is O.K. ')
-      #else:
-      #  val_list.append(new_file_path + ' ISDOC Validation is incorrect ')
+      if my_schema.is_valid(working_dir +'/isdoc/' + new_file_path):
+        val_list.append( new_file_path +  ' ISDOC Validation is O.K. ')
+      else:
+        val_list.append(new_file_path + ' ISDOC Validation is incorrect ')
       i+=1
     return val_list
 
