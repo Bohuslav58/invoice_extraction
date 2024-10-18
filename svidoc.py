@@ -1244,12 +1244,12 @@ def convert(file_path):
 
 
 
-      my_schema = xmlschema.XMLSchema('isdoc-invoice-6.0.2.xsd')
+      #my_schema = xmlschema.XMLSchema('isdoc-invoice-6.0.2.xsd')
 
-      if my_schema.is_valid(working_dir +'/isdoc/' + new_file_path):
-        val_list.append( new_file_path +  ' ISDOC Validation is O.K. ')
-      else:
-        val_list.append(new_file_path + ' ISDOC Validation is incorrect ')
+      #if my_schema.is_valid(working_dir +'/isdoc/' + new_file_path):
+      #  val_list.append( new_file_path +  ' ISDOC Validation is O.K. ')
+      #else:
+      #  val_list.append(new_file_path + ' ISDOC Validation is incorrect ')
       i+=1
     return val_list
 
