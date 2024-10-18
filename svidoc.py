@@ -1215,7 +1215,9 @@ if os.path.isfile('protokol_conversion.txt'):
   os.remove('protokol_conversion.txt')
 
 def convert(file_path):
+    print('file_path', file_path)
     working_dir=os.getcwd()
+    print('working_dir', working_dir)
     i=0 # index of input file
     val_list=[]
     print('path name', file_path)
@@ -1241,7 +1243,7 @@ def convert(file_path):
         os.mkdir(working_dir + "/isdoc")
 
 
-      filling_mindee_xml(file_path[i], working_dir  +new_file_path)
+      filling_mindee_xml(file_path[i], working_dir  + new_file_path)
 
 
 
