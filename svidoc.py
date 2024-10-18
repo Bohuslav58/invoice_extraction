@@ -1235,11 +1235,11 @@ def convert(file_path):
 
 
 
-      if not os.path.exists(working_dir +'/isdoc'):
-        os.mkdir(working_dir + "/isdoc")
+#      if not os.path.exists(working_dir +'/isdoc'):
+ #       os.mkdir(working_dir + "/isdoc")
 
 
-      filling_mindee_xml(file_path[i], working_dir +'/isdoc/' +new_file_path)
+      filling_mindee_xml(file_path[i], working_dir  +new_file_path)
 
 
 
