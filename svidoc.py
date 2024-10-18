@@ -1218,6 +1218,7 @@ def convert(file_path):
     working_dir=os.getcwd()
     i=0 # index of input file
     val_list=[]
+    print('path name', file_pat)
 
     while(i< len(file_path)):
       #separate filename and change file type
@@ -1225,6 +1226,7 @@ def convert(file_path):
       base_name, _ = os.path.splitext(tail)
       #separate filename and change file type
       new_file_path = base_name + "." + "isdoc"
+      print('new_file_path', new_file_path)
       try:
         mindee_client = Client(api_key="50a18642a4f354d983511b86d7b3214b")
       except  HTTPError as e:
